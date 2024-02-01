@@ -1,23 +1,23 @@
 #include "binary_trees.h"
 
 /**
- * compare_depth - compare size
+ * get_nodes - compare size
  *
  * @tree: pointer to the root
  * Return: size
  */
-int compare_depth(const binary_tree_t *tree)
+int get_nodes(const binary_tree_t *tree)
 {
 	if (!tree)
 		return (0);
 	else
-		return (compare_depth(tree->left) + 1 + compare_depth(tree->right));
+		return (get_nodes(tree->left) + 1 + get_nodes(tree->right));
 }
 
 /**
- * binary_tree_is_perfect - function that checks if a binary tree is perfect
+ * binary_tree_is_perfect - binary tree is perfect
  *
- * @tree: pointer to the root node of the tree to check
+ * @tree: pointer
  * Return: 0
  */
 
@@ -31,8 +31,8 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 	if (tree && (!tree->left && !tree->right))
 		return (1);
 
-	h_left = compare_depth(tree->left);
-	h_right = compare_depth(tree->right);
+	h_left = get_nodes(tree->left);
+	h_right = get_nodes(tree->right);
 
 	if ((h_left - h_right) == 0)
 		return (1);

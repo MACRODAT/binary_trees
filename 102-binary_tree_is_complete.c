@@ -1,18 +1,18 @@
 #include "binary_trees.h"
 
 /**
- * count_nodes - counter
+ * binary_tree_count - counter
  * @root:  node
  *
  * Return: Number odes
  */
 
-int count_nodes(binary_tree_t *root)
+int binary_tree_count(binary_tree_t *root)
 {
 	if (!root)
 		return (0);
 
-	return (1 + count_nodes(root->left) + count_nodes(root->right));
+	return (1 + binary_tree_count(root->left) + binary_tree_count(root->right));
 }
 
 
@@ -58,7 +58,7 @@ int binary_tree_is_complete(const binary_tree_t *tree)
 		return (0);
 
 	root = (binary_tree_t *)tree;
-	nod = count_nodes(root);
+	nod = binary_tree_count(root);
 
 	return (is_complete(root, 0, nod));
 }

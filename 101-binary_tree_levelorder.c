@@ -43,7 +43,8 @@ void print_level_order(const binary_tree_t *tree, int level, void (*func)(int))
 }
 
 /**
- * binary_tree_levelorder - function
+ * binary_tree_levelorder - function using stupid method
+ * For better results use queue
  * @tree: ptr
  * @func: ptr
  * Return: void

@@ -1,13 +1,13 @@
 #include "binary_trees.h"
 
 /**
- * isBST - Compare node in order to check if a given
+ * isBST - Comparee
  *
- * @tree: pointer to the root node of the tree to check
- * @min: min value
- * @max: max value
+ * @tree: ptr
+ * @min: min
+ * @max: max
  *
- * Return: 1 if success, 0 otherwise
+ * Return: 1 if success
  */
 int isBST(const binary_tree_t *tree, int min, int max)
 {
@@ -24,10 +24,10 @@ int isBST(const binary_tree_t *tree, int min, int max)
 }
 
 /**
- * binary_tree_is_bst - checks if a binary tree is a valid Binary Search tree
+ * binary_tree_is_bst - checks if a binary tree is BST
  *
- * @tree: pointer to the root node of the tree to check
- * Return: 1 if success, 0 otherwise
+ * @tree: ptr
+ * Return: 1 if success
  */
 int binary_tree_is_bst(const binary_tree_t *tree)
 {

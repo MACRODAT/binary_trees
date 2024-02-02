@@ -22,7 +22,7 @@ int binary_tree_count(binary_tree_t *root)
  * @ind: ind
  * @n: nbr
  *
- * Return: 1 if the tree is a heap, 0 otherwise
+ * Return: 1 the tree is complete
  */
 
 int is_complete(binary_tree_t *root, int ind, int n)

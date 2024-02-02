@@ -1,7 +1,7 @@
 #include "binary_trees.h"
 
 /**
- * count_nodes - Counts ths inside a tree
+ * count_nodes - counter
  * @root:  node
  *
  * Return: Number odes
@@ -17,10 +17,10 @@ int count_nodes(binary_tree_t *root)
 
 
 /**
- * is_complete - Checks if a tree is complete
- * @root: Pointer to tree's root
- * @index: Index of the node been evaluated
- * @n: number of trees nod
+ * is_complete - checker
+ * @root: ptr root
+ * @index: ind
+ * @n: nbr
  *
  * Return: 1 if the tree is a heap, 0 otherwise
  */
@@ -44,10 +44,10 @@ int is_complete(binary_tree_t *root, int index, int n)
 }
 
 /**
- * binary_tree_is_complete - check for bt complete
- * @tree: Pointer to root
+ * binary_tree_is_complete - bst complet?
+ * @tree: Ptr
  *
- * Return: 1 if
+ * Return: 1
  */
 int binary_tree_is_complete(const binary_tree_t *tree)
 {

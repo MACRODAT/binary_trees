@@ -19,28 +19,28 @@ int binary_tree_count(binary_tree_t *root)
 /**
  * is_complete - checker
  * @root: ptr root
- * @index: ind
+ * @ind: ind
  * @n: nbr
  *
  * Return: 1 if the tree is a heap, 0 otherwise
  */
 
-int is_complete(binary_tree_t *root, int index, int n)
+int is_complete(binary_tree_t *root, int ind, int n)
 {
 	if (!root)
 		return (0);
 
-	if (index >= n)
+	if (ind >= n)
 		return (0);
 	if (!root->left && !root->right)
 		return (1);
 	if (root->right && !root->left)
 		return (0);
 	if (root->left && !root->right)
-		return (is_complete(root->left, index * 2 + 1, n));
+		return (is_complete(root->left, ind * 2 + 1, n));
 
-	return (is_complete(root->left, index * 2 + 1, n) &&
-		is_complete(root->right, index * 2 + 2, n));
+	return (is_complete(root->left, ind * 2 + 1, n) &&
+		is_complete(root->right, ind * 2 + 2, n));
 }
 
 /**
